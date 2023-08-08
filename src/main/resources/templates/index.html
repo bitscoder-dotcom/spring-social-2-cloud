@@ -5,6 +5,11 @@
     <title>Welcome</title>
 </head>
 <body>
-<h1>Welcome to my app!</h1>
+<div>
+    <h1>Welcome to my app!</h1>
+    <div sec:authorize="isAuthenticated()">
+        <p sec:authentication="principal"></p>
+    </div>
+</div>
 </body>
 </html>
